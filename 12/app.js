@@ -82,3 +82,21 @@ console.log("JSON do LocalStorage \n", jsonDoLocalStorage);
     com uma permanência maior ou sessionStorage apenas enquanto ativa a aba 
     de navegação
 */
+
+// Exemplo prático: 
+
+var nomeDoUsuario = localStorage.getItem('Nome do Usuário');
+
+if (nomeDoUsuario == null) {
+    var nomeDoUsuario = prompt("Qual seu nome?");
+    localStorage.setItem("Nome do Usuário", nomeDoUsuario);
+}
+else {
+    var identificacaoDoUsuarioLogado = document.querySelector(".h1");
+    identificacaoDoUsuarioLogado.innerText = nomeDoUsuario;
+}
+
+// localStorage.clear();
+// localStorage.setItem("Nome do Usuário"); 
+// localStorege.removeItem("Nome do Usuário");
+// localStorage.getItem("Nome do Usuário"); 
